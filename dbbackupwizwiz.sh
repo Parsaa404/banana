@@ -1,13 +1,13 @@
 #!/bin/bash
 
-telegramBotToken=$(cat /var/www/html/wizwizxui-timebot/baseInfo.php | grep '$botToken' | cut -d"'" -f2)
-telegramBotToken2=$(cat /var/www/html/wizwizxui-timebot/baseInfo.php | grep '$botToken' | cut -d'"' -f2)
-filepath="/var/www/html/wizwizxui-timebot/baseInfo.php"
+telegramBotToken=$(cat /var/www/html/bananabot/baseInfo.php | grep '$botToken' | cut -d"'" -f2)
+telegramBotToken2=$(cat /var/www/html/bananabot/baseInfo.php | grep '$botToken' | cut -d'"' -f2)
+filepath="/var/www/html/bananabot/baseInfo.php"
 chatID=$(cat $filepath | grep '$admin =' | sed 's/.*= //' | sed 's/;//')
 
-databaseUser=$(cat /var/www/html/wizwizxui-timebot/baseInfo.php | grep '$dbUserName' | cut -d"'" -f2)
-databasePassword=$(cat /var/www/html/wizwizxui-timebot/baseInfo.php | grep '$dbPassword' | cut -d"'" -f2)
-databaseName=$(cat /var/www/html/wizwizxui-timebot/baseInfo.php | grep '$dbName' | cut -d"'" -f2)
+databaseUser=$(cat /var/www/html/bananabot/baseInfo.php | grep '$dbUserName' | cut -d"'" -f2)
+databasePassword=$(cat /var/www/html/bananabot/baseInfo.php | grep '$dbPassword' | cut -d"'" -f2)
+databaseName=$(cat /var/www/html/bananabot/baseInfo.php | grep '$dbName' | cut -d"'" -f2)
 
 backupDir='/tmp/db_backup'
 mkdir -p $backupDir
