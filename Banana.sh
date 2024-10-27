@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Written By: Banana
+# Written By: banana
 
 if [ "$(id -u)" -ne 0 ]; then
     echo -e "\033[33mPlease run as root\033[0m"
@@ -20,10 +20,10 @@ echo -e "\e[32m
  |___/  /_/ \_\  |_|\_|  /_/ \_\  |_|\_|  /_/ \_\  
 
 \033[0m"
-echo -e "    \e[31mTelegram Channel: \e[34m@Bananazch\033[0m | \e[31mTelegram Group: \e[34m@Bananadev\033[0m\n"
+echo -e "    \e[31mTelegram Channel: \e[34m@bananazch\033[0m | \e[31mTelegram Group: \e[34m@bananadev\033[0m\n"
 
 #sleep
-echo -e "\e[32mInstalling Banana script ... \033[0m\n"
+echo -e "\e[32mInstalling banana script ... \033[0m\n"
 sleep 5
 
 sudo apt update && apt upgrade -y
@@ -254,7 +254,7 @@ wait
 
     randomdbdb=$(openssl rand -base64 10 | tr -dc 'a-zA-Z0-9' | cut -c1-22)
 
-    if [[ $(mysql -u root -p$ROOT_PASSWORD -e "SHOW DATABASES LIKE 'Banana'") ]]; then
+    if [[ $(mysql -u root -p$ROOT_PASSWORD -e "SHOW DATABASES LIKE 'banana'") ]]; then
         clear
         echo -e "\n\e[91mYou have already created the database\033[0m\n"
     else
@@ -324,7 +324,7 @@ wait
         sleep 1
 
         curl -F "url=https://${YOUR_DOMAIN}/bananabot/bot.php" "https://api.telegram.org/bot${YOUR_BOT_TOKEN}/setWebhook"
-        MESSAGE="✅ The Banana bot has been successfully installed! @banana"
+        MESSAGE="✅ The banana bot has been successfully installed! @banana"
         curl -s -X POST "https://api.telegram.org/bot${YOUR_BOT_TOKEN}/sendMessage" -d chat_id="${YOUR_CHAT_ID}" -d text="$MESSAGE"
         
         
@@ -357,7 +357,7 @@ wait
         echo -e "\e[33mDatabase username: \e[36m${dbuser}\033[0m"
         echo -e "\e[33mDatabase password: \e[36m${dbpass}\033[0m"
         echo " "
-        echo -e "\e[100mBanana panel:\033[0m"
+        echo -e "\e[100mbanana panel:\033[0m"
         echo -e "\e[33maddres: \e[36mhttps://${YOUR_DOMAIN}/${RANDOM_CODE}/login.php\033[0m"
         
         echo " "
