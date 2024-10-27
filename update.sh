@@ -186,10 +186,10 @@ do
 			
 			wait
 			
-			passs=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$pass' | cut -d"'" -f2)
-   			userrr=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$user' | cut -d"'" -f2)
-			pathsss=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$path' | cut -d"'" -f2)
-			pathsss=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$path' | cut -d"'" -f2)
+			passs=$(cat /root/confbanana/dbrootbanana.txt | grep '$pass' | cut -d"'" -f2)
+   			userrr=$(cat /root/confbanana/dbrootbanana.txt | grep '$user' | cut -d"'" -f2)
+			pathsss=$(cat /root/confbanana/dbrootbanana.txt | grep '$path' | cut -d"'" -f2)
+			pathsss=$(cat /root/confbanana/dbrootbanana.txt | grep '$path' | cut -d"'" -f2)
 			passsword=$(cat /var/www/html/bananabot/baseInfo.php | grep '$dbPassword' | cut -d"'" -f2)
    			userrrname=$(cat /var/www/html/bananabot/baseInfo.php | grep '$dbUserName' | cut -d"'" -f2)
 			

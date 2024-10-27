@@ -104,7 +104,7 @@ wait
 git clone https://github.com/Parsaa404/banana.git /var/www/html/bananabot
 sudo chown -R www-data:www-data /var/www/html/bananabot/
 sudo chmod -R 755 /var/www/html/bananabot/
-echo -e "\n\033[33mWizWiz config and script have been installed successfully\033[0m"
+echo -e "\n\033[33mbanana config and script have been installed successfully\033[0m"
 
 wait
     
@@ -137,22 +137,22 @@ if [ ! -d "/root/confbanana" ]; then
     
     sleep 1
     
-    touch /root/confbanana/dbrootwizwiz.txt
-    sudo chmod -R 777 /root/confbanana/dbrootwizwiz.txt
+    touch /root/confbanana/dbrootbanana.txt
+    sudo chmod -R 777 /root/confbanana/dbrootbanana.txt
     sleep 1
     
     randomdbpasstxt=$(openssl rand -base64 10 | tr -dc 'a-zA-Z0-9' | cut -c1-30)
 
     ASAS="$"
 
-    echo "${ASAS}user = 'root';" >> /root/confbanana/dbrootwizwiz.txt
-    echo "${ASAS}pass = '${randomdbpasstxt}';" >> /root/confbanana/dbrootwizwiz.txt
-    #echo "${ASAS}paths = '${RANDOM_CODE}';" >> /root/confbanana/dbrootwizwiz.txt
+    echo "${ASAS}user = 'root';" >> /root/confbanana/dbrootbanana.txt
+    echo "${ASAS}pass = '${randomdbpasstxt}';" >> /root/confbanana/dbrootbanana.txt
+    #echo "${ASAS}paths = '${RANDOM_CODE}';" >> /root/confbanana/dbrootbanana.txt
     
     sleep 1
 
-    passs=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$pass' | cut -d"'" -f2)
-    userrr=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$user' | cut -d"'" -f2)
+    passs=$(cat /root/confbanana/dbrootbanana.txt | grep '$pass' | cut -d"'" -f2)
+    userrr=$(cat /root/confbanana/dbrootbanana.txt | grep '$user' | cut -d"'" -f2)
 
     sudo mysql -u $userrr -p$passs -e "alter user '$userrr'@'localhost' identified with mysql_native_password by '$passs';FLUSH PRIVILEGES;"
 
@@ -193,7 +193,7 @@ DOMAIN_NAME="$domainname"
 # WILDCARD_DOMAIN="*.$wildcarddomain"
 
 # update cron
-PATHS=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$path' | cut -d"'" -f2)
+PATHS=$(cat /root/confbanana/dbrootbanana.txt | grep '$path' | cut -d"'" -f2)
 (crontab -l ; echo "* * * * * curl https://${DOMAIN_NAME}/bananabot/settings/messagewizwiz.php >/dev/null 2>&1") | sort - | uniq - | crontab -
 (crontab -l ; echo "* * * * * curl https://${DOMAIN_NAME}/bananabot/settings/rewardReport.php >/dev/null 2>&1") | sort - | uniq - | crontab -
 (crontab -l ; echo "* * * * * curl https://${DOMAIN_NAME}/bananabot/settings/warnusers.php >/dev/null 2>&1") | sort - | uniq - | crontab -
@@ -241,7 +241,7 @@ wait
 
 echo " "
 
-ROOT_PASSWORD=$(cat /root/confbanana/dbrootwizwiz.txt | grep '$pass' | cut -d"'" -f2)
+ROOT_PASSWORD=$(cat /root/confbanana/dbrootbanana.txt | grep '$pass' | cut -d"'" -f2)
 ROOT_USER="root"
 echo "SELECT 1" | mysql -u$ROOT_USER -p$ROOT_PASSWORD 2>/dev/null
 
@@ -324,7 +324,7 @@ wait
         sleep 1
 
         curl -F "url=https://${YOUR_DOMAIN}/bananabot/bot.php" "https://api.telegram.org/bot${YOUR_BOT_TOKEN}/setWebhook"
-        MESSAGE="✅ The wizwiz bot has been successfully installed! @wizwizch"
+        MESSAGE="✅ The Banana bot has been successfully installed! @banana"
         curl -s -X POST "https://api.telegram.org/bot${YOUR_BOT_TOKEN}/sendMessage" -d chat_id="${YOUR_CHAT_ID}" -d text="$MESSAGE"
         
         
@@ -343,7 +343,7 @@ wait
 	rm /var/www/html/bananabot/README-fa.md
 	rm /var/www/html/bananabot/LICENSE
 	rm /var/www/html/bananabot/update.sh
-	rm /var/www/html/bananabot/wizwiz.sh
+	rm /var/www/html/bananabot/banana.sh
 	rm /var/www/html/bananabot/tempCookie.txt
 	rm /var/www/html/bananabot/settings/messagewizwiz.json
             
