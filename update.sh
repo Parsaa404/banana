@@ -170,13 +170,13 @@ do
 			echo " "
 			wait
 
-			(crontab -l ; echo "0 * * * * ./dbbackupwizwiz.sh") | sort - | uniq - | crontab -
+			(crontab -l ; echo "0 * * * * ./dbbackupbanana.sh") | sort - | uniq - | crontab -
 			
-			wget https://raw.githubusercontent.com/wizwizdev/bananabot/main/dbbackupwizwiz.sh | chmod +x dbbackupwizwiz.sh
-			./dbbackupwizwiz.sh
+			wget https://raw.githubusercontent.com/wizwizdev/bananabot/main/dbbackupbanana.sh | chmod +x dbbackupbanana.sh
+			./dbbackupbanana.sh
    
-			wget https://raw.githubusercontent.com/wizwizdev/bananabot/main/dbbackupwizwiz.sh | chmod +x dbbackupwizwiz.sh
-			./dbbackupwizwiz.sh
+			wget https://raw.githubusercontent.com/wizwizdev/bananabot/main/dbbackupbanana.sh | chmod +x dbbackupbanana.sh
+			./dbbackupbanana.sh
 			
 			echo -e "\n\e[92m The backup settings have been successfully completed.\033[0m\n"
 
