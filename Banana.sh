@@ -10,7 +10,16 @@ fi
 wait
 
 echo -e "\e[32m
-cat banner.txt \033[0m"
+                     )                )            
+   (      (       ( /(     (       ( /(     (      
+ ( )\     )\      )\())    )\      )\())    )\     
+ )((_) ((((_)(   ((_)\  ((((_)(   ((_)\  ((((_)(   
+((_)_   )\ _ )\   _((_)  )\ _ )\   _((_)  )\ _ )\  
+ | _ )  (_)_\(_) | \| |  (_)_\(_) | \| |  (_)_\(_) 
+ | _ \   / _ \   | .` |   / _ \   | .` |   / _ \   
+ |___/  /_/ \_\  |_|\_|  /_/ \_\  |_|\_|  /_/ \_\  
+
+\033[0m"
 echo -e "    \e[31mTelegram Channel: \e[34m@Bananazch\033[0m | \e[31mTelegram Group: \e[34m@Bananadev\033[0m\n"
 
 #sleep
@@ -158,9 +167,14 @@ clear
 
 echo " "
 echo -e "\e[32m
-
-cat bannerSLL.txt
-
+                     )                )               (      (      (     
+   (      (       ( /(     (       ( /(     (         )\ )   )\ )   )\ )  
+ ( )\     )\      )\())    )\      )\())    )\       (()/(  (()/(  (()/(  
+ )((_) ((((_)(   ((_)\  ((((_)(   ((_)\  ((((_)(      /(_))  /(_))  /(_)) 
+((_)_   )\ _ )\   _((_)  )\ _ )\   _((_)  )\ _ )\    (_))   (_))   (_))   
+ | _ )  (_)_\(_) | \| |  (_)_\(_) | \| |  (_)_\(_)   / __|  / __|  | |    
+ | _ \   / _ \   | .` |   / _ \   | .` |   / _ \     \__ \  \__ \  | |__  
+ |___/  /_/ \_\  |_|\_|  /_/ \_\  |_|\_|  /_/ \_\    |___/  |___/  |____|
 \033[0m\n"
 
 read -p "Enter the domain: " domainname
@@ -240,11 +254,11 @@ wait
 
     randomdbdb=$(openssl rand -base64 10 | tr -dc 'a-zA-Z0-9' | cut -c1-22)
 
-    if [[ $(mysql -u root -p$ROOT_PASSWORD -e "SHOW DATABASES LIKE 'wizwiz'") ]]; then
+    if [[ $(mysql -u root -p$ROOT_PASSWORD -e "SHOW DATABASES LIKE 'Banana'") ]]; then
         clear
         echo -e "\n\e[91mYou have already created the database\033[0m\n"
     else
-        dbname=wizwiz
+        dbname=Banana
         clear
         echo -e "\n\e[32mPlease enter the database username!\033[0m"
         printf "[+] Default user name is \e[91m${randomdbdb}\e[0m ( let it blank to use this user name ): "
@@ -343,7 +357,7 @@ wait
         echo -e "\e[33mDatabase username: \e[36m${dbuser}\033[0m"
         echo -e "\e[33mDatabase password: \e[36m${dbpass}\033[0m"
         echo " "
-        echo -e "\e[100mwizwiz panel:\033[0m"
+        echo -e "\e[100mBanana panel:\033[0m"
         echo -e "\e[33maddres: \e[36mhttps://${YOUR_DOMAIN}/${RANDOM_CODE}/login.php\033[0m"
         
         echo " "

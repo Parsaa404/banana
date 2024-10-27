@@ -152,7 +152,7 @@ do
 			clear
 
 			echo -e ' '
-			      echo -e "\e[100mwizwiz panel:\033[0m"
+			      echo -e "\e[100mBanana panel:\033[0m"
 			      echo -e "\e[33maddres: \e[36mhttps://domain.com/${RANDOM_CODE}/login.php\033[0m"
 			      echo " "
 			      echo -e "\e[92mThe script was successfully updated!\033[0m\n"
